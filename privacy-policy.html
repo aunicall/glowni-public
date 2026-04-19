@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glowni — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 24px;
+    line-height: 1.65;
+    color: #222;
+    background: #fdfdfd;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #1a1a1a; }
+    a { color: #ff9940; }
+    .lang-switch button { background: #2a2a2a; color: #e8e8e8; border-color: #444; }
+    .lang-switch button.active { background: #ff8c00; color: #000; }
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 28px; color: #ff8c00; }
+  .meta { color: #888; font-size: 13px; margin-bottom: 24px; }
+  .lang-switch {
+    display: flex; gap: 8px; margin: 16px 0 28px;
+  }
+  .lang-switch button {
+    padding: 6px 14px; border-radius: 999px;
+    border: 1px solid #ccc; background: #fff; cursor: pointer;
+    font-size: 13px;
+  }
+  .lang-switch button.active { background: #ff8c00; color: #fff; border-color: #ff8c00; }
+  section[lang] { display: none; }
+  section[lang].active { display: block; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+
+<h1>Glowni Privacy Policy</h1>
+<div class="meta">Last updated: April 18, 2026</div>
+
+<div class="lang-switch">
+  <button onclick="setLang('en')" id="btn-en" class="active">English</button>
+  <button onclick="setLang('zh')" id="btn-zh">中文</button>
+</div>
+
+<section lang="en" class="active">
+  <p>Thank you for using Glowni (the "App"). We take your privacy seriously. This Privacy Policy explains how the App handles your information.</p>
+
+  <h2>1. We do not collect any personal information</h2>
+  <p>The App <strong>does not collect, store, or transmit</strong> any personally identifiable information, including but not limited to: name, email, phone number, location data, IP address, contacts, photos, health data, device identifiers (IDFA / IDFV), usage behavior, crash logs, or analytics data.</p>
+
+  <h2>2. Local Data Storage</h2>
+  <p>All preferences you configure inside the App (such as selected color theme, sound, brightness, timer, volume, etc.) are stored <strong>locally on your device</strong> via <code>UserDefaults</code>. This data never leaves your device, is never uploaded to any server, and will be deleted together with the App when you uninstall it.</p>
+
+  <h2>3. Network Requests</h2>
+  <p>The App uses Apple's <strong>On-Demand Resources (ODR)</strong> technology to download audio files from Apple's CDN the first time you select a sound. This process is hosted entirely by Apple and governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. It does not involve any third-party servers, and we cannot track, log, or access your download behavior.</p>
+  <p>Other than ODR downloads, the App performs <strong>no other network communication</strong>.</p>
+
+  <h2>4. Third-Party SDKs</h2>
+  <p>The App <strong>does not integrate any third-party SDKs</strong>, including analytics tools, advertising SDKs, crash-reporting services, or social login providers.</p>
+
+  <h2>5. Children's Privacy</h2>
+  <p>The App is not specifically designed for children under 13 and does not knowingly collect any information from children. As the App collects no personal data at all, there is no children's privacy concern.</p>
+
+  <h2>6. Permissions</h2>
+  <p>The App <strong>does not request any sensitive permissions</strong>: no location, camera, photo library, contacts, microphone, or push notification access. It only uses standard audio playback, which does not require additional user authorization.</p>
+
+  <h2>7. Changes to This Policy</h2>
+  <p>If the App introduces any feature in the future that may affect this Privacy Policy (e.g., accounts, in-app purchases, analytics), we will clearly notify you within the App and update this document accordingly.</p>
+
+  <h2>8. Contact Us</h2>
+  <p>If you have any questions regarding this Privacy Policy, please contact us at: <a href="mailto:glowni@163.com">glowni@163.com</a></p>
+</section>
+
+<section lang="zh">
+  <p>感谢您使用 Glowni（以下简称"本应用"）。我们非常重视您的隐私。本隐私政策说明本应用如何处理您的个人信息。</p>
+
+  <h2>一、我们不收集任何个人信息</h2>
+  <p>本应用<strong>不收集、不存储、不传输</strong>任何可用于识别您身份的个人信息，包括但不限于：姓名、邮箱、手机号、位置信息、IP 地址、通讯录、照片、健康数据、设备标识符（IDFA / IDFV）、使用行为、崩溃日志、分析数据。</p>
+
+  <h2>二、本应用的数据存储</h2>
+  <p>所有您在应用内设置的偏好（例如所选主题颜色、音效、亮度、定时器设置、音量等）仅保存在您设备<strong>本地</strong>的 <code>UserDefaults</code> 中。这些数据永远不会离开您的设备，不会被上传到任何服务器，会在您卸载本应用时随应用一起被删除。</p>
+
+  <h2>三、网络请求</h2>
+  <p>本应用使用 Apple 提供的 <strong>On-Demand Resources (ODR) 按需下载</strong>技术，用于在您首次选择某个音效时从 Apple CDN 下载对应的音频文件。此下载过程完全由 Apple 服务托管，遵循 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>，不涉及任何第三方服务器。我们不会追踪、不会记录、也无法访问您的下载行为。</p>
+  <p>除此之外，本应用不进行任何其他网络通信。</p>
+
+  <h2>四、第三方 SDK</h2>
+  <p>本应用<strong>未集成任何第三方 SDK</strong>，包括分析工具、广告 SDK、崩溃上报工具以及社交登录。</p>
+
+  <h2>五、儿童隐私</h2>
+  <p>本应用不专门面向 13 岁以下儿童设计，也不会故意收集任何儿童的个人信息。由于本应用不收集任何个人信息，因此不存在儿童隐私问题。</p>
+
+  <h2>六、权限使用说明</h2>
+  <p>本应用<strong>不请求任何敏感权限</strong>：不请求位置、相机、相册、通讯录、麦克风、推送通知等权限。本应用仅使用标准的音频播放能力，这一能力无需您的额外授权。</p>
+
+  <h2>七、隐私政策的变更</h2>
+  <p>如果本应用未来引入任何可能影响本隐私政策的功能（例如登录、内购、分析等），我们会在应用内明确告知您，并在本文档中更新说明。</p>
+
+  <h2>八、联系我们</h2>
+  <p>若您对本隐私政策有任何疑问或建议，请联系：<a href="mailto:glowni@163.com">glowni@163.com</a></p>
+</section>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('section[lang]').forEach(s=>s.classList.toggle('active', s.lang===l));
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.getElementById('btn-zh').classList.toggle('active', l==='zh');
+}
+</script>
+
+</body>
+</html>
