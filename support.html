@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glowni — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 24px;
+    line-height: 1.65;
+    color: #222;
+    background: #fdfdfd;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #1a1a1a; }
+    a { color: #ff9940; }
+    .lang-switch button { background: #2a2a2a; color: #e8e8e8; border-color: #444; }
+    .lang-switch button.active { background: #ff8c00; color: #000; }
+    .card { background: #252525; border-color: #3a3a3a; }
+    .faq summary { color: #f0d9b5; }
+    code { background: #2a2a2a; color: #ffb970; }
+  }
+  h1 { font-size: 30px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 32px; color: #ff8c00; }
+  .meta { color: #888; font-size: 13px; margin-bottom: 24px; }
+  .lang-switch {
+    display: flex; gap: 8px; margin: 16px 0 28px;
+  }
+  .lang-switch button {
+    padding: 6px 14px; border-radius: 999px;
+    border: 1px solid #ccc; background: #fff; cursor: pointer;
+    font-size: 13px;
+  }
+  .lang-switch button.active { background: #ff8c00; color: #fff; border-color: #ff8c00; }
+  section[lang] { display: none; }
+  section[lang].active { display: block; }
+  ul { padding-left: 20px; }
+  .card {
+    background: #fff8ef;
+    border: 1px solid #f3e0c0;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .card p { margin: 6px 0; }
+  .email {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #ff8c00;
+    color: #fff !important;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+  .faq details {
+    border-bottom: 1px solid #eaeaea;
+    padding: 14px 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    .faq details { border-bottom-color: #333; }
+  }
+  .faq summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #c87000;
+    list-style: none;
+    position: relative;
+    padding-left: 22px;
+  }
+  .faq summary::before {
+    content: "›";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    transition: transform 0.2s;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .faq details[open] summary::before { transform: rotate(90deg); }
+  .faq details p { margin: 10px 0 4px; }
+  code {
+    background: #f2ead7;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  .footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+  }
+  @media (prefers-color-scheme: dark) {
+    .footer { border-top-color: #333; }
+  }
+  .footer a { color: inherit; margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<h1>Glowni Support</h1>
+<div class="meta">Last updated: April 20, 2026</div>
+
+<div class="lang-switch">
+  <button onclick="setLang('en')" id="btn-en" class="active">English</button>
+  <button onclick="setLang('zh')" id="btn-zh">中文</button>
+</div>
+
+<!-- ============================== ENGLISH ============================== -->
+<section lang="en" class="active">
+  <p>Thank you for using <strong>Glowni</strong> — a minimalist sleep aid that turns your iPhone into a warm bedside lamp with gentle ambient sounds. We're a tiny indie team and we read every message personally.</p>
+
+  <div class="card">
+    <p><strong>Need help?</strong> Email us and we'll usually reply within 1–2 business days.</p>
+    <a class="email" href="mailto:glowni@163.com?subject=Glowni%20Support">glowni@163.com</a>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+
+    <details>
+      <summary>Why does a sound need to download the first time I tap it?</summary>
+      <p>To keep the app install tiny, Glowni uses Apple's <strong>On-Demand Resources (ODR)</strong> system. Audio files are hosted on Apple's own CDN and are downloaded only when you first select them. Once downloaded, they stay on your device and play instantly the next time.</p>
+    </details>
+
+    <details>
+      <summary>"Couldn't reach the cloud" — how do I fix it?</summary>
+      <p>This friendly message appears when the first-time download fails. Please check your Wi-Fi or cellular connection, then tap the track again to retry. A few seconds of signal is usually enough — after the file is cached, no network is ever required again.</p>
+    </details>
+
+    <details>
+      <summary>Does Glowni work offline?</summary>
+      <p>Yes. After the first download of any sound, Glowni runs <strong>entirely offline</strong>. No account, no tracking, no network calls.</p>
+    </details>
+
+    <details>
+      <summary>How do I unlock the Child Lock?</summary>
+      <p>When Child Lock is active, all taps are blocked and a small lock hint appears. <strong>Press and hold anywhere on the screen for 3 seconds</strong> — a ring will fill around your finger. When the ring completes, the lock is released.</p>
+    </details>
+
+    <details>
+      <summary>What does the sleep timer do when it ends?</summary>
+      <p>In the final 60 seconds, audio fades out gently (logarithmic curve). When the timer reaches zero, the sound stops and the screen slowly dims to black to save battery. Tap the screen to wake it up again.</p>
+    </details>
+
+    <details>
+      <summary>What exactly does Glowni Pro unlock?</summary>
+      <p>A one-time purchase that adds <strong>11 more light themes</strong> and <strong>6 more sound categories (18 additional tracks)</strong> to the free tier. It's a one-time purchase with lifetime access — no subscription, no ads. The free tier (Amber light, Rain sound, Silence) remains fully usable without any purchase.</p>
+    </details>
+
+    <details>
+      <summary>I bought Pro on another device / reinstalled the app. How do I get it back?</summary>
+      <p>Open the paywall (tap any locked color or sound) and tap <strong>Restore Purchase</strong> at the bottom. As long as you're signed in with the same Apple ID that made the purchase, Pro will be restored instantly and for free.</p>
+    </details>
+
+    <details>
+      <summary>Can I use Glowni with my own music or Spotify?</summary>
+      <p>Glowni's audio session is set to <em>mix with others</em>, so you can start your favorite playlist in another app and use Glowni purely as a bedside lamp with the screen glow — or layer both audio sources together.</p>
+    </details>
+
+    <details>
+      <summary>How do I request a refund?</summary>
+      <p>All purchases are processed by Apple. To request a refund, please visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> and sign in with the Apple ID used for the purchase. Refund eligibility is determined by Apple.</p>
+    </details>
+
+    <details>
+      <summary>Does Glowni collect any data about me?</summary>
+      <p>No. Glowni collects zero personal data. All of your settings (theme, volume, timer preference, etc.) are stored locally on your device via <code>UserDefaults</code> and never leave it. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
+    </details>
+
+  </div>
+
+  <h2>Feature Requests & Feedback</h2>
+  <p>We'd love to hear from you. Tell us which sounds or colors you'd like to see next, or simply let us know what's working well. Every message goes directly to the maker.</p>
+  <p>→ <a href="mailto:glowni@163.com?subject=Glowni%20Feedback">glowni@163.com</a></p>
+
+  <h2>Bug Reports</h2>
+  <p>If something doesn't feel right, please include the following so we can help quickly:</p>
+  <ul>
+    <li>Your iPhone model and iOS version (e.g. iPhone 14, iOS 17.4)</li>
+    <li>The Glowni version (see App Store listing or the bottom of the settings panel in future versions)</li>
+    <li>What you were doing when it happened</li>
+    <li>A screenshot or short screen recording if possible</li>
+  </ul>
+</section>
+
+<!-- ============================== 中文 ============================== -->
+<section lang="zh">
+  <p>感谢你使用 <strong>Glowni</strong>。我们是一个很小的独立团队，把 Glowni 打造成一盏温柔的床头灯 + 自然白噪音陪你入睡。每一封邮件都会被本人亲自阅读与回复。</p>
+
+  <div class="card">
+    <p><strong>需要帮助？</strong>给我们发邮件，通常 1–2 个工作日内会收到回复。</p>
+    <a class="email" href="mailto:glowni@163.com?subject=Glowni%20%E6%94%AF%E6%8C%81">glowni@163.com</a>
+  </div>
+
+  <h2>常见问题</h2>
+  <div class="faq">
+
+    <details>
+      <summary>为什么第一次点一首音效需要下载？</summary>
+      <p>为了让 App 体积保持很小，Glowni 使用苹果的 <strong>按需资源（On-Demand Resources, ODR）</strong>技术。音频文件托管在 Apple 自己的 CDN 上，只在你第一次选中某类音效时下载。下载完成后会一直缓存在设备上，之后播放无需网络。</p>
+    </details>
+
+    <details>
+      <summary>出现 "Couldn't reach the cloud" 怎么办？</summary>
+      <p>这是首次下载时网络不佳的友好提示。请检查你的 Wi-Fi 或移动网络，然后再次轻点曲目重试。几秒的良好网络就够了——下载一次之后永远不再需要联网。</p>
+    </details>
+
+    <details>
+      <summary>Glowni 可以离线使用吗？</summary>
+      <p>可以。任一音效首次下载成功后，Glowni <strong>完全离线运行</strong>：无账号、无追踪、无网络请求。</p>
+    </details>
+
+    <details>
+      <summary>童锁怎么解锁？</summary>
+      <p>童锁开启后，所有轻触都会被拦截并弹出小锁图标提示。<strong>在屏幕任意位置长按 3 秒</strong>——手指周围会出现一个填充圆环，环满即解锁。</p>
+    </details>
+
+    <details>
+      <summary>计时器结束后会发生什么？</summary>
+      <p>最后 60 秒，音频按对数曲线缓慢淡出。计时归零时声音停止，屏幕也会慢慢变黑以省电。再次轻点屏幕即可唤醒。</p>
+    </details>
+
+    <details>
+      <summary>Glowni Pro 具体解锁了什么？</summary>
+      <p>一次性购买，新增 <strong>11 种光色主题</strong>与 <strong>6 类助眠音效（18 首曲目）</strong>。一次购买，终身使用；无订阅，无广告。免费层（Amber 光色、Rain 雨声、Silence 静音）始终可用，无需任何购买。</p>
+    </details>
+
+    <details>
+      <summary>在别的设备买过 / 重装过 App，怎么恢复？</summary>
+      <p>点任意加锁的光色或音效，打开付费墙，拉到底部点击 <strong>Restore Purchase</strong>。只要登录的是当初购买时的同一个 Apple ID，Pro 会立即免费恢复。</p>
+    </details>
+
+    <details>
+      <summary>可以和 Apple Music / Spotify 一起用吗？</summary>
+      <p>可以。Glowni 的音频会话设为 "mix with others"（与其他音频混合），你完全可以先在其他 app 播放你喜欢的歌单，然后把 Glowni 当作床头灯使用——或者把两种声音叠加在一起。</p>
+    </details>
+
+    <details>
+      <summary>怎么申请退款？</summary>
+      <p>所有购买都由苹果官方处理。请访问 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>，用当时购买所用的 Apple ID 登录后提交退款申请。是否符合退款条件由苹果判定。</p>
+    </details>
+
+    <details>
+      <summary>Glowni 会收集我的什么数据？</summary>
+      <p>不会收集任何个人数据。你的偏好（主题、音量、计时器等）全部以 <code>UserDefaults</code> 存在本机，从不上传。详见 <a href="privacy-policy.html">隐私政策</a>。</p>
+    </details>
+
+  </div>
+
+  <h2>建议与反馈</h2>
+  <p>我们非常想听到你的声音：下一个你最想要的光色、音效，或是对现有功能的任何感受，都欢迎直接写信告诉我们。每封邮件都会到达开发者本人。</p>
+  <p>→ <a href="mailto:glowni@163.com?subject=Glowni%20%E5%8F%8D%E9%A6%88">glowni@163.com</a></p>
+
+  <h2>Bug 反馈</h2>
+  <p>如果遇到了问题，烦请提供以下信息，便于我们快速排查：</p>
+  <ul>
+    <li>iPhone 型号与 iOS 版本（如 iPhone 14，iOS 17.4）</li>
+    <li>Glowni 版本号（可在 App Store 产品页或后续版本的设置面板底部查看）</li>
+    <li>问题发生时你正在做什么</li>
+    <li>截图或短屏幕录制（如果方便的话）</li>
+  </ul>
+</section>
+
+<div class="footer">
+  <a href="privacy-policy.html">Privacy Policy</a> ·
+  <a href="terms-of-use.html">Terms of Use</a> ·
+  <a href="mailto:glowni@163.com">Contact</a>
+  <br><br>
+  © 2026 Glowni. Made with care for better sleep.
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('section[lang]').forEach(s => s.classList.remove('active'));
+    document.querySelector('section[lang="' + lang + '"]').classList.add('active');
+    document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+    document.getElementById('btn-' + lang).classList.add('active');
+  }
+  // 根据浏览器语言自动切换默认
+  if ((navigator.language || '').toLowerCase().startsWith('zh')) {
+    setLang('zh');
+  }
+</script>
+
+</body>
+</html>
