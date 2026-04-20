@@ -284,10 +284,7 @@
     document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
     document.getElementById('btn-' + lang).classList.add('active');
   }
-  // 根据浏览器语言自动切换默认
-  if ((navigator.language || '').toLowerCase().startsWith('zh')) {
-    setLang('zh');
-  }
+  // 默认英文；中文用户可手动点击右上角切换
 </script>
 
 </body>
